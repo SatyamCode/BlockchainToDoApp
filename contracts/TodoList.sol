@@ -12,6 +12,12 @@ contract TodoList {
 
     mapping(uint256 => Task) public tasks; // creating a database analogous to blockchain.
 
+    event TaskCreated(
+        uint id,
+        string content,
+        bool completed
+    );
+
     constructor() public {
         createTask("Checkout my app code on github");
     }
@@ -20,5 +26,6 @@ contract TodoList {
         //function to create tasks
         taskCount++;
         tasks[taskCount] = Task(taskCount, _content, false);
+        emit TaskCreated(taskCount, _content, false);
     }
 }
