@@ -7,7 +7,7 @@
 Clone the project
 
 ```bash
-  git clone https://github.com/SatyamCode/BlockchainToDoApp
+  git clone https://github.com/SatyamCode/BlockchainToDoApp.git
 ```
 
 Go to the project directory
